@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Qest.Example.Infrastructure\Qest.Example.Infrastructure.csproj" />
+    <ProjectReference Include="..\Qest.Example.Service.Interface\Qest.Example.Service.Interface.csproj" />
   </ItemGroup>
 
 </Project>
