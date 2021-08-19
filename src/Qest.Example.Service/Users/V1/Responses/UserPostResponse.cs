@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Qest.Example.Service.Responses
+namespace Qest.Example.Service.Users.V1.Responses
 {
   public class UserPostResponse
   {

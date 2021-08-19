@@ -7,16 +7,16 @@ namespace Qest.Example.Users.Queries.Handlers
 {
   internal class GetUserQueryHandler: IRequestHandler<GetUserQuery, UserDetailDto?>
   {
-    private readonly IUserRepository _userRepository;
+    private readonly IUserRepository fUserRepository;
 
     public GetUserQueryHandler(IUserRepository userRepository)
     {
-      _userRepository = userRepository;
+      fUserRepository = userRepository;
     }
 
     public async Task<UserDetailDto?> Handle(GetUserQuery request, CancellationToken cancellationToken)
     {
-      return await _userRepository.GetDetailByIdAsync(request.UserId, cancellationToken);
+      return await fUserRepository.GetDetailByIdAsync(request.UserId, cancellationToken);
     }
   }
 }

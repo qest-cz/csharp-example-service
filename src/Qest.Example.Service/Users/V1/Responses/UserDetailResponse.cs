@@ -1,7 +1,11 @@
-﻿namespace Qest.Example.Users
+﻿using System;
+
+namespace Qest.Example.Service.Users.V1.Responses
 {
-  public record UserCreationDto
+  public class UserDetailResponse
   {
+    public Guid Id { get; set; }
+
     public UserRole Role { get; set; }
 
     public string Email { get; set; } = null!;

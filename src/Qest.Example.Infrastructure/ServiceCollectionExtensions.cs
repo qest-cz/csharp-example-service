@@ -1,7 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Qest.Example.DbContexts;
 using Qest.Example.Repositories;
+using Qest.Example.SqlServer;
+using Qest.Example.SqlServer.Repositories;
 
 namespace Qest.Example
 {

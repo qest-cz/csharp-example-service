@@ -6,18 +6,18 @@ using Qest.Example.Repositories;
 
 namespace Qest.Example.Users.Queries.Handlers
 {
-  internal class GetUsersQueryHandler: IRequestHandler<GetUsersQuery, IReadOnlyList<UserPreviewDto>>
+  internal class GetUsersQueryHandler: IRequestHandler<GetUsersQuery, IReadOnlyCollection<UserPreviewDto>>
   {
-    private readonly IUserRepository _userRepository;
+    private readonly IUserRepository fUserRepository;
 
     public GetUsersQueryHandler(IUserRepository userRepository)
     {
-      _userRepository = userRepository;
+      fUserRepository = userRepository;
     }
 
-    public async Task<IReadOnlyList<UserPreviewDto>> Handle(GetUsersQuery request, CancellationToken cancellationToken)
+    public async Task<IReadOnlyCollection<UserPreviewDto>> Handle(GetUsersQuery request, CancellationToken cancellationToken)
     {
-      return await _userRepository.GetManyAsync(request.Model, cancellationToken);
+      return await fUserRepository.GetManyAsync(request.Model, cancellationToken);
     }
   }
 }

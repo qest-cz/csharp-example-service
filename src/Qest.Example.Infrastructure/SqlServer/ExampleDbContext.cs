@@ -1,14 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Qest.Example.Entities;
+using Qest.Example.SqlServer.Entities;
 
-namespace Qest.Example.DbContexts
+namespace Qest.Example.SqlServer
 {
   internal sealed class ExampleDbContext: DbContext
   {
     public ExampleDbContext(DbContextOptions<ExampleDbContext> options)
       : base(options) { }
 
-    public DbSet<UserEntity> Users { get; set; }
+    public DbSet<UserEntity> Users { get; set; } = null!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

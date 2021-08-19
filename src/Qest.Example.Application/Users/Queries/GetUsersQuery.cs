@@ -3,7 +3,7 @@ using MediatR;
 
 namespace Qest.Example.Users.Queries
 {
-  public sealed class GetUsersQuery: IRequest<IReadOnlyList<UserPreviewDto>>
+  public sealed class GetUsersQuery: IRequest<IReadOnlyCollection<UserPreviewDto>>
   {
     public GetUsersQuery(UserQueryDto model)
     {

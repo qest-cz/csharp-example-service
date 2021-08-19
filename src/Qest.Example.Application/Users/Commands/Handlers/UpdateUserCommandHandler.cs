@@ -8,24 +8,24 @@ namespace Qest.Example.Users.Commands.Handlers
 {
   internal sealed class UpdateUserCommandHandler: IRequestHandler<UpdateUserCommand, bool>
   {
-    private readonly IUserRepository _userRepository;
-    private readonly IEmailService _emailService;
+    private readonly IUserRepository fUserRepository;
+    private readonly IEmailService fEmailService;
 
     public UpdateUserCommandHandler(
       IUserRepository userRepository,
       IEmailService emailService)
     {
-      _userRepository = userRepository;
-      _emailService = emailService;
+      fUserRepository = userRepository;
+      fEmailService = emailService;
     }
 
     public async Task<bool> Handle(UpdateUserCommand request, CancellationToken cancellationToken)
     {
-      var user = await _userRepository.UpdateAsync(request.UserId, request.Model, cancellationToken);
+      var user = await fUserRepository.UpdateAsync(request.UserId, request.Model, cancellationToken);
       if (user is null)
         return false;
 
-      await _emailService.SendMessage(
+      await fEmailService.SendMessage(
         user.Email,
         $"User '{user.FirstName} {user.LastName}' updated",
         "Your contact has been added to database.",

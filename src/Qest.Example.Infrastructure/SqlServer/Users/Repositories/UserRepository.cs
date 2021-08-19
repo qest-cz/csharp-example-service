@@ -6,27 +6,27 @@ using System.Threading.Tasks;
 using Mapster;
 using MapsterMapper;
 using Microsoft.EntityFrameworkCore;
-using Qest.Example.DbContexts;
+using Qest.Example.Repositories;
 using Qest.Example.Users;
 
-namespace Qest.Example.Repositories
+namespace Qest.Example.SqlServer.Repositories
 {
   internal sealed class UserRepository: IUserRepository
   {
-    private readonly ExampleDbContext _dbContext;
-    private readonly IMapper _mapper;
+    private readonly ExampleDbContext fDbContext;
+    private readonly IMapper fMapper;
 
     public UserRepository(
       ExampleDbContext dbContext,
       IMapper mapper)
     {
-      _dbContext = dbContext;
-      _mapper = mapper;
+      fDbContext = dbContext;
+      fMapper = mapper;
     }
 
-    public async Task<IReadOnlyList<UserPreviewDto>> GetManyAsync(UserQueryDto model, CancellationToken cancellationToken)
+    public async Task<IReadOnlyCollection<UserPreviewDto>> GetManyAsync(UserQueryDto model, CancellationToken cancellationToken)
     {
-      var query = _dbContext.Users
+      var query = fDbContext.Users
         .AsNoTracking();
 
       if (model.Role.HasValue)
@@ -37,7 +37,7 @@ namespace Qest.Example.Repositories
         .ThenBy(e => e.FirstName)
         .Skip(model.Offset)
         .Take(model.Limit)
-        .ProjectToType<UserPreviewDto>(_mapper.Config)
+        .ProjectToType<UserPreviewDto>(fMapper.Config)
         .ToListAsync(cancellationToken);
     }
 
