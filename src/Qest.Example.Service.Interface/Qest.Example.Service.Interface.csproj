@@ -4,6 +4,10 @@
     <TargetFramework>net5.0</TargetFramework>
     <Nullable>enable</Nullable>
     <RootNamespace>Qest.Example.Service</RootNamespace>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.0</Version>
+    <Copyright>Qest automation s.r.o.</Copyright>
+    <Company>Qest</Company>
   </PropertyGroup>
 
   <ItemGroup>
