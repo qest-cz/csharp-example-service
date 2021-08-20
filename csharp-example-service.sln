@@ -15,10 +15,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{603E4A78
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{7F866A41-9EF7-4808-A5E1-2E244BD6C8A0}"
 	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
 		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		Directory.Build.props = Directory.Build.props
+		stylecop.json = stylecop.json
+		stylecop.ruleset = stylecop.ruleset
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qest.Example.Service.Interface", "src\Qest.Example.Service.Interface\Qest.Example.Service.Interface.csproj", "{62FCDFF3-86F5-4808-AA20-C51CBFD1765B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Qest.Example.Service.Interface", "src\Qest.Example.Service.Interface\Qest.Example.Service.Interface.csproj", "{62FCDFF3-86F5-4808-AA20-C51CBFD1765B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

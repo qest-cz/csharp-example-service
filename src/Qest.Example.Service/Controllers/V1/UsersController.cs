@@ -11,7 +11,7 @@ using Qest.Example.Users;
 using Qest.Example.Users.Commands;
 using Qest.Example.Users.Queries;
 
-namespace Qest.Example.Service.Users.V1.Controllers
+namespace Qest.Example.Service.Controllers.V1
 {
   [ApiController]
   [Route("api/{apiVersion}/users")]

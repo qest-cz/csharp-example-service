@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace Qest.Example.SqlServer.Entities
+namespace Qest.Example.SqlServer.Users
 {
   internal sealed class UserEntity
   {

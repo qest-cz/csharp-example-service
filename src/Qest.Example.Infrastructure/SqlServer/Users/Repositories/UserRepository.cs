@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 using Mapster;
 using MapsterMapper;
 using Microsoft.EntityFrameworkCore;
-using Qest.Example.Repositories;
 using Qest.Example.Users;
+using Qest.Example.Users.Repositories;
 
-namespace Qest.Example.SqlServer.Repositories
+namespace Qest.Example.SqlServer.Users.Repositories
 {
   internal sealed class UserRepository: IUserRepository
   {

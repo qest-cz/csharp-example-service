@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Qest.Example.SqlServer.Entities;
+using Qest.Example.SqlServer.Users;
 
 namespace Qest.Example.SqlServer
 {

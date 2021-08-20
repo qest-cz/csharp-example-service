@@ -1,7 +1,7 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
-using Qest.Example.Repositories;
+using Qest.Example.Users.Repositories;
 
 namespace Qest.Example.Users.Queries.Handlers
 {
