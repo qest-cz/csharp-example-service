@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31313.79
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Qest.Example.Service", "src\Qest.Example.Service\Qest.Example.Service.csproj", "{04B3CE54-D2CE-4896-AB06-537190713C43}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Qest.Example.Application", "src\Qest.Example.Application\Qest.Example.Application.csproj", "{BA219279-3EA9-4FF2-8DEC-9D8EBB43497F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Qest.Example.Infrastructure", "src\Qest.Example.Infrastructure\Qest.Example.Infrastructure.csproj", "{77472298-3B59-45E5-BF9D-49C0698F988F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Qest.Example.Core", "src\Qest.Example.Core\Qest.Example.Core.csproj", "{84C9575C-FCBD-4ABD-85B3-01D2F3B21019}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{603E4A78-BE02-4FBB-AEC0-4D0FBB92AA53}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{7F866A41-9EF7-4808-A5E1-2E244BD6C8A0}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qest.Example.Service.Interface", "src\Qest.Example.Service.Interface\Qest.Example.Service.Interface.csproj", "{62FCDFF3-86F5-4808-AA20-C51CBFD1765B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04B3CE54-D2CE-4896-AB06-537190713C43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04B3CE54-D2CE-4896-AB06-537190713C43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04B3CE54-D2CE-4896-AB06-537190713C43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04B3CE54-D2CE-4896-AB06-537190713C43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA219279-3EA9-4FF2-8DEC-9D8EBB43497F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA219279-3EA9-4FF2-8DEC-9D8EBB43497F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA219279-3EA9-4FF2-8DEC-9D8EBB43497F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA219279-3EA9-4FF2-8DEC-9D8EBB43497F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77472298-3B59-45E5-BF9D-49C0698F988F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77472298-3B59-45E5-BF9D-49C0698F988F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77472298-3B59-45E5-BF9D-49C0698F988F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77472298-3B59-45E5-BF9D-49C0698F988F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84C9575C-FCBD-4ABD-85B3-01D2F3B21019}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84C9575C-FCBD-4ABD-85B3-01D2F3B21019}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84C9575C-FCBD-4ABD-85B3-01D2F3B21019}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84C9575C-FCBD-4ABD-85B3-01D2F3B21019}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62FCDFF3-86F5-4808-AA20-C51CBFD1765B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62FCDFF3-86F5-4808-AA20-C51CBFD1765B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62FCDFF3-86F5-4808-AA20-C51CBFD1765B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62FCDFF3-86F5-4808-AA20-C51CBFD1765B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4E3827F2-EE15-4C69-AED5-2CDF88149D20}
+	EndGlobalSection
+EndGlobal
