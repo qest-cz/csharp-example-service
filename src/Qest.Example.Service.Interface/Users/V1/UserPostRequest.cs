@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Qest.Example.Service.Users.V1.Requests
+namespace Qest.Example.Service.Users.V1
 {
   public class UserPostRequest
   {
