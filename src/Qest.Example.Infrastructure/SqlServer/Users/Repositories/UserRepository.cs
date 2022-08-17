@@ -41,9 +41,12 @@ namespace Qest.Example.SqlServer.Users.Repositories
         .ToListAsync(cancellationToken);
     }
 
-    public Task<Guid?> CreateAsync(UserCreationDto model, CancellationToken cancellationToken)
+    public async Task<Guid?> CreateAsync(UserCreationDto model, CancellationToken cancellationToken)
     {
-      throw new NotImplementedException();
+      var user = fDbContext.Users.Add(fMapper.Map<UserEntity>(model));
+
+      await fDbContext.SaveChangesAsync(cancellationToken);
+      return user.Entity.Id;
     }
 
     public Task<UserDetailDto?> GetDetailByIdAsync(Guid userId, CancellationToken cancellationToken)
@@ -54,6 +57,21 @@ namespace Qest.Example.SqlServer.Users.Repositories
     public Task<UserDetailDto?> UpdateAsync(Guid userId, UserUpdateDto model, CancellationToken cancellationToken)
     {
       throw new NotImplementedException();
+    }
+
+    public async Task<bool> DeleteAsync(Guid userId, CancellationToken cancellationToken)
+    {
+      UserEntity? user = fDbContext.Users.Find(userId);
+
+      if (user is not null)
+      {
+        fDbContext.Users.Remove(user);
+        await fDbContext.SaveChangesAsync(cancellationToken);
+
+        return true;
+      }
+
+      return false;
     }
   }
 }

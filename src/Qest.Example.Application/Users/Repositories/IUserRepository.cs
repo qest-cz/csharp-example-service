@@ -14,5 +14,7 @@ namespace Qest.Example.Users.Repositories
     Task<UserDetailDto?> GetDetailByIdAsync(Guid userId, CancellationToken cancellationToken);
 
     Task<UserDetailDto?> UpdateAsync(Guid userId, UserUpdateDto model, CancellationToken cancellationToken);
+
+    Task<bool> DeleteAsync(Guid userId, CancellationToken cancellationToken);
   }
 }
