@@ -86,5 +86,18 @@ namespace Qest.Example.Service.Controllers.V1
 
       return Ok();
     }
+
+    [HttpDelete("{userId}")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public async Task<IActionResult> DeleteAsync([FromRoute] Guid userId, CancellationToken cancellationToken)
+    {
+      bool success = await fMediator.Send(new DeleteUserCommand(userId), cancellationToken);
+
+      if (!success)
+        return NotFound();
+
+      return Ok();
+    }
   }
 }
